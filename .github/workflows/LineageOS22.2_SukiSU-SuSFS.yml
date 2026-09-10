@@ -47,7 +47,7 @@ jobs:
     - name: Setup SukiSU
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-        curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/f1dd81dc96d7f3f6691e6ac8b50fba9ae8a2f17c/kernel/setup.sh" | bash -s master
+        curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s susfs-rksu-master
         KSU_VERSION=$(cd KernelSU && expr $(/usr/bin/git rev-list --count HEAD) + 10200)
         echo "KSUVER=$KSU_VERSION" >> $GITHUB_ENV
 
